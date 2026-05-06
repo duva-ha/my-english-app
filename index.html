@@ -2,16 +2,45 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Kids Pro</title>
-    
-    <!-- 🔗 KẾT NỐI FILE CSS Ở ĐÂY -->
+    <!-- Kết nối file CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Giữ nguyên phần nội dung <div>, <header>,... của con ở đây -->
+<header>
+    <h1>🚀 ENGLISH PRO FOR KIDS</h1>
+</header>
 
-    <!-- 🧠 KẾT NỐI FILE JS Ở ĐÂY (Đặt trước thẻ đóng </body>) -->
-    <script src="script.js"></script>
+<div class="topic-menu">
+    <button class="btn-nav" onclick="changeTopic('animals')">🐾 Động vật</button>
+    <button class="btn-nav" onclick="changeTopic('colors')">🎨 Màu sắc</button>
+    <button class="btn-nav" onclick="changeTopic('foods')">🍕 Đồ ăn</button>
+</div>
+
+<div class="main-container">
+    <div class="progress" id="progress">Đang tải...</div>
+
+    <div class="card" onclick="flipCard()">
+        <div class="card-inner" id="cardInner">
+            <div class="front" id="frontSide">
+                <span id="engWord">Hello</span>
+                <button class="btn-speak" onclick="speakText(event)">🔊</button>
+            </div>
+            <div class="back" id="backSide" style="background-color: #fd79a8;">
+                <span id="vieWord">Xin chào</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn-nav" onclick="prevCard()">Quay lại</button>
+        <button class="btn-nav" onclick="nextCard()">Tiếp theo</button>
+    </div>
+</div>
+
+<!-- Kết nối file JavaScript -->
+<script src="script.js"></script>
 </body>
 </html>
